@@ -3,8 +3,6 @@
 #include <assert.h>
 #include "Comp.h"
 
-// -1 = inf
-
 void SE_Solver(double a, double b, double c, double* x1, double* x2, int* roots_amount)
 {
 	assert(x1 != x2);

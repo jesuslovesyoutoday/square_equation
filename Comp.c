@@ -6,7 +6,6 @@
 int Cmp(double a, double b)
 {
 	int out;
-	//int precision = 1e-7;
 
 	if (fabs(a - b) < precision)
 	{
