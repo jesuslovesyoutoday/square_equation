@@ -38,7 +38,7 @@ void SE_Solver(double a, double b, double c, double* x1, double* x2, int* roots_
 	}
 	else if (Cmp(b, 0)==0)
 	{
-		if (Cmp(c, 0) > 0)
+		if (Cmp(c, 0) < 0)
 		{
 			double k;
 			k = sqrt(c/a);
