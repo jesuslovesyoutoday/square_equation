@@ -1,3 +1,6 @@
+#ifndef COMP_H
+#define COMP_H
+
 #include <stdio.h>
 
 //----------------------------------------------------------------------------
@@ -16,3 +19,4 @@
 
 int Cmp(double a, double b);
 
+#endif //COMP_H

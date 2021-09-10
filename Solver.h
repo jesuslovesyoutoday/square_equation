@@ -1,3 +1,6 @@
+#ifndef SOLVER_H
+#define SOLVER_H
+
 #include <stdio.h>
 
 //---------------------------------------------------------
@@ -13,3 +16,5 @@
 //---------------------------------------------------------
 
 void SE_Solver(double a, double b, double c, double* x1, double* x2, int* roots_amount);
+
+#endif // SOLVER_H
