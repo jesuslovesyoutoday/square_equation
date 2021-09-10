@@ -5,20 +5,16 @@
 
 int Cmp(double a, double b)
 {
-	int out;
-
 	if (fabs(a - b) < precision)
 	{
-		out = 0;
+		return 0;
 	}
 	else if ((a - b) > 0)
 	{
-		out = 1;
+		return 1;
 	}
 	else
 	{
-		out = -1;
+		return -1;
 	}
-		
-	return out;
 }

@@ -6,8 +6,8 @@
 //----------------------------------------------------------------------------
 //! Compares two arguments
 //! 
-//! @param[in] a first argument
-//! @param[in] b second param
+//! @param[in] <a> first argument
+//! @param[in] <b> second param
 //! 
 //! @return outcome of comparison
 //!
