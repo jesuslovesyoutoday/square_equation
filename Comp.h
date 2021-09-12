@@ -1,8 +1,6 @@
 #ifndef COMP_H
 #define COMP_H
 
-#include <stdio.h>
-
 //----------------------------------------------------------------------------
 //! Compares two arguments
 //! 

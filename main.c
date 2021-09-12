@@ -4,25 +4,28 @@
 
 int main()
 {
-	printf("#####__Square_Equation_Soolver__####\n");
-	printf("##                                ##\n");
-	printf("##          /\\_/\\     ^           ##\n");
-	printf("##         / *-* \\    \\ \\         ##\n");
-	printf("##         |      \\   | |         ##\n");
-	printf("##         | | | | \\_/ /          ##\n");
-	printf("##         [_[_][_____/           ##\n");
-	printf("##                                ##\n");
-	printf("####################################\n\n");
+	puts("#####__Square_Equation_Soolver__####");
+	puts("##                                ##");
+	puts("##          /\\_/\\     ^           ##");
+	puts("##         / *-* \\    \\ \\         ##");
+	puts("##         |      \\   | |         ##");
+	puts("##         | | | | \\_/ /          ##");
+	puts("##         [_[_][_____/           ##");
+	puts("##                                ##");
+	puts("####################################\n");
 	
-	printf("Enter coefficients:\n\n");
+	puts("Enter coefficients:\n");
 
 	double a = 0, b = 0, c = 0;
 	double x1 = 0, x2 = 0;
 
-	int roots_amount;
-	int arg_amount;
+	int roots_amount = 0;
+	int arg_amount = 0;
 
 	arg_amount = scanf("%lg %lg %lg", &a, &b, &c);
+
+	// ieee 754 --- число одинарной точности (вики) --- как получить максимальное положительное число
+	// которое можно записать в float 
 	
 	if ((arg_amount == 3) && isfinite(a) && isfinite(b) && isfinite(c) && isfinite(b*b) && isfinite(4*a*c))
 	{
