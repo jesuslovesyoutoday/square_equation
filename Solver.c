@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "Comp.h"
 
-void SE_Solver(double a, double b, double c, double* x1, double* x2, int* roots_amount)
+int SE_Solver(double a, double b, double c, double* x1, double* x2)
 {
 	assert(x1 != x2);
 	assert(x1 != NULL);
@@ -13,28 +13,28 @@ void SE_Solver(double a, double b, double c, double* x1, double* x2, int* roots_
 	{
 		if (Cmp(a, 0)==0 && Cmp(b, 0)==0)
 		{
-			*roots_amount = -1;
+			return -1;
 		}
 		else if (Cmp(a, 0)==0 || Cmp(b, 0)==0)
 		{
 			*x1 = 0;
-			*roots_amount = 1;
+			return 1;
 		}
 		else 
 		{
 			*x1 = 0;
 			*x2 = -b/a;
-			*roots_amount = 2;
+			return 2;
 		}
 	}
 	else if (Cmp(a, 0)==0 && Cmp(b, 0)==0)
 	{
-		*roots_amount = 0;
+		return 0;
 	}
 	else if (Cmp(a, 0)==0)
 	{
 		*x1 = -c/b;
-		*roots_amount = 1;
+		return 1;
 	}
 	else if (Cmp(b, 0)==0)
 	{
@@ -44,11 +44,11 @@ void SE_Solver(double a, double b, double c, double* x1, double* x2, int* roots_
 			k = sqrt(c/a);
 			*x1 = -k;
 			*x2 = k;
-			*roots_amount = 2;
+			return 2;
 		}
 		else
 		{
-			*roots_amount = 0;
+			return 0;
 		}
 	}
 	else 
@@ -64,17 +64,17 @@ void SE_Solver(double a, double b, double c, double* x1, double* x2, int* roots_
 
 			if (Cmp(*x1, *x2)==0)
 			{
-				*roots_amount = 1;
+				return 1;
 			}
 			else
 			{
-				*roots_amount = 2;
+				return 2;
 			}
 		}
 
 		else
 		{
-			*roots_amount = 0;
+			return 0;
 		}
 
 	}

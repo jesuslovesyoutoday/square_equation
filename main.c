@@ -29,7 +29,7 @@ int main()
 	
 	if ((arg_amount == 3) && isfinite(a) && isfinite(b) && isfinite(c) && isfinite(b*b) && isfinite(4*a*c))
 	{
-		SE_Solver(a, b, c, &x1, &x2, &roots_amount);
+		roots_amount = SE_Solver(a, b, c, &x1, &x2);
 		
 		printf("\nSolution:\n\n");
 		if (roots_amount == 0)
