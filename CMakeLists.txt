@@ -7,5 +7,6 @@ add_executable(sq_eq
 	main.c
 	Solver.c
 	Comp.c
-	output.c)
+	output.c
+	input.c)
 target_link_libraries(sq_eq m)

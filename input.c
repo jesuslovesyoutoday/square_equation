@@ -1,0 +1,32 @@
+#include "input.h"
+#include <math.h>
+#include <stdio.h>
+#include <assert.h>
+
+void input(double* a, double* b, double* c)
+{
+	assert(a != NULL);
+	assert(b != NULL);
+	assert(c != NULL);
+	assert(a != b);
+	assert(b != c);
+	assert(a != c);
+
+	int arg_amount = 0;
+	puts("Enter coefficients:\n");
+	arg_amount = scanf("%lg %lg %lg", a, b, c);
+
+	if (arg_amount != 3)
+	{
+		while (arg_amount != 3)
+		{
+			while (getchar() != '\n');
+			puts("Wrong arguments, enter 3 numbers\n");
+			arg_amount = scanf("%lg %lg %lg", a, b, c);
+		}
+	}
+	
+	assert(isfinite(*a));
+	assert(isfinite(*b));
+	assert(isfinite(*c));
+}
