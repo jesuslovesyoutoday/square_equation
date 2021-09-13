@@ -14,6 +14,8 @@
 //! @return amount of roots 
 //---------------------------------------------------------
 
-int SE_Solver(double a, double b, double c, double* x1, double* x2);
+enum Amount_of_roots { ZERO, ONE, TWO, INF };
+
+enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double* x2);
 
 #endif // SOLVER_H
