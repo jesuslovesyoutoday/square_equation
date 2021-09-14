@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "Solver.h"
+#include "solver.h"
 #include "output.h"
 #include "input.h"
 

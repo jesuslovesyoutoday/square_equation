@@ -8,5 +8,4 @@ void Unit_Test(double a, double b, double c, double* x1, double* x2, enum Amount
 		printf("Test number %d passed\n", number);
 	else
 		printf("Test number %d failed\n", number);
-	printf("x1 = %lg, x2 = %lg\n", *x1, *x2);
 }

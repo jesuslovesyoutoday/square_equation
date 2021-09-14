@@ -3,21 +3,23 @@
 
 void output(double x1, double x2, enum Amount_of_roots roots_amount)
 {
-	printf("\nSolution:\n\n");
-	if (roots_amount == ZERO)
-	{
-		printf("There are no roots\n");
-	}
-	else if (roots_amount == ONE)
-	{
+	puts("\nSolution:\n");
+
+	switch (roots_amount) {
+	case ZERO:
+		puts("There are no roots\n");
+		break;
+	case ONE:
 		printf("x1 = %lg\n", x1);
-	}
-	else if (roots_amount == INF)
-	{
-		printf("Infinite amount of roots\n");
-	}
-	else if (roots_amount == TWO)
-	{
+		break;
+	case INF:
+		puts("Infinite amount of roots\n");
+		break;
+	case TWO:
 		printf("x1 = %lg, x2 = %lg\n", x1, x2);
-	}	
+		break;
+	default:
+		puts("Error");
+		break;
+	}
 }

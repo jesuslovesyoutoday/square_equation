@@ -1,7 +1,7 @@
 #ifndef UNIT_TEST_H
 #define UNIT_TEST_H
 
-#include "Solver.h"
+#include "solver.h"
 
 //------------------------------------------------------
 //! Tester for Square Equation Solver

@@ -1,7 +1,7 @@
 #ifndef OUTPUT_H
 #define OUTPUT_H
 
-#include "Solver.h"
+#include "solver.h"
 
 //-----------------------------------------------
 //! Prints the solution of the equation

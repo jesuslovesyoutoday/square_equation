@@ -14,17 +14,16 @@ void input(double* a, double* b, double* c)
 
 	int arg_amount = 0;
 	puts("Enter coefficients:\n");
-	arg_amount = scanf("%lg %lg %lg", a, b, c);
 
-	if (arg_amount != 3)
-	{
-		while (arg_amount != 3)
-		{
-			while (getchar() != '\n');
-			puts("Wrong arguments, enter 3 numbers\n");
-			arg_amount = scanf("%lg %lg %lg", a, b, c);
-		}
-	}
+	do {
+		arg_amount = scanf("%lg %lg %lg", a, b, c);
+		while (getchar() != '\n');
+		if (arg_amount != 3)
+			{
+				puts("\nWrong arguments, enter 3 numbers\n");
+			}
+		} while(arg_amount != 3);
+	
 	
 	assert(isfinite(*a));
 	assert(isfinite(*b));

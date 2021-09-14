@@ -14,7 +14,12 @@
 //! @return amount of roots 
 //---------------------------------------------------------
 
-enum Amount_of_roots { ZERO, ONE, TWO, INF };
+enum Amount_of_roots { 
+	ZERO = 0, 
+	ONE  = 1, 
+	TWO  = 2, 
+	INF  = 3 
+};
 
 enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double* x2);
 

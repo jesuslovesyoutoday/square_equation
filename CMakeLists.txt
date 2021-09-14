@@ -5,8 +5,8 @@ set(LANGUAGE CXX)
 
 add_executable(sq_eq
 	main.c
-	Solver.c
-	Comp.c
+	solver.c
+	comp.c
 	output.c
 	input.c)
 target_link_libraries(sq_eq m)

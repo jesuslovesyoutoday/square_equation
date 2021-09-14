@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
-#include "Comp.h"
-#include "Solver.h"
+#include "comp.h"
+#include "solver.h"
 #include "input.h"
 
 enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double* x2)
