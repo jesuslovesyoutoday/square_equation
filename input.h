@@ -1,3 +1,6 @@
+#ifndef INPUT_H
+#define INPUT_H
+
 //-------------------------------------------------------
 //! Reads an arguments from the user's input
 //!
@@ -10,3 +13,5 @@
 //--------------------------------------------------------
 
 void input(double* a, double* b, double* c);
+
+#endif // INPUT_H

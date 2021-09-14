@@ -3,9 +3,10 @@
 #include <assert.h>
 #include "Comp.h"
 #include "Solver.h"
+#include "input.h"
 
 enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double* x2)
-{
+{	
 	assert(x1 != x2);
 	assert(x1 != NULL);
 	assert(x2 != NULL);
@@ -41,8 +42,7 @@ enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double*
 	{
 		if (Cmp(c, 0) < 0)
 		{
-			double k;
-			k = sqrt(c/a);
+			double k = sqrt(-c/a);
 			*x1 = -k;
 			*x2 = k;
 			return TWO;
@@ -54,12 +54,10 @@ enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double*
 	}
 	else 
 	{
-		double discr;
-		discr = b*b - 4*a*c;
+		double discr = b*b - 4*a*c;
 		if (Cmp(discr, 0)==0 || Cmp(discr, 0)>0)
 		{
-			double sqrt_discr;
-			sqrt_discr = sqrt(discr);
+			double sqrt_discr = sqrt(discr);
 			*x1 = (-b + sqrt_discr)/(2*a);
 			*x2 = (-b - sqrt_discr)/(2*a);
 

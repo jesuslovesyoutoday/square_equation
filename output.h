@@ -1,3 +1,6 @@
+#ifndef OUTPUT_H
+#define OUTPUT_H
+
 #include "Solver.h"
 
 //-----------------------------------------------
@@ -10,3 +13,5 @@
 //!----------------------------------------------
 
 void output(double x1, double x2, enum Amount_of_roots roots_amount);
+
+#endif // OUTPUT_H

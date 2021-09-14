@@ -20,9 +20,6 @@ int main()
 	double x1 = 0, x2 = 0;
 
 	enum Amount_of_roots roots_amount;
-
-	// ieee 754 --- число одинарной точности (вики) --- как получить максимальное положительное число
-	// которое можно записать в float 
 	
 	input(&a, &b, &c);
 	roots_amount = SE_Solver(a, b, c, &x1, &x2);

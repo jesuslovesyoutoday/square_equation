@@ -1,74 +1,12 @@
-#include <stdio.h>
 #include "unit_test.h"
-#include "Solver.h"
+#include <stdio.h>
 
-int main()
+void Unit_Test(double a, double b, double c, double* x1, double* x2, enum Amount_of_roots* roots_amount,  double answ1, double answ2, enum Amount_of_roots outcome, int number)
 {
-	double x1 = 0, x2 = 0;
-	int roots_amount;
-
-//----------------a = 0, b = 0, c = 0----------------//
-
-	SE_Solver(0, 0, 0, &x1, &x2, &roots_amount);
-	if (roots_amount == -1)
-	{
-		printf("Infinity test passed\n");
-	}
+	*roots_amount = SE_Solver(a, b, c, x1, x2);
+	if(*x1 == answ1 && *x2 == answ2 && *roots_amount == outcome)
+		printf("Test number %d passed\n", number);
 	else
-	{
-		printf("Infinity test failed\n");
-	}
-//---------------------------------------------------//
-
-//----------------a = 0, b = 0, c = 1----------------//
-
-	SE_Solver(0, 0, 1, &x1, &x2, &roots_amount);
-	if (roots_amount == 0)
-	{
-		printf("No roots test passed\n");
-	}
-	else
-	{
-		printf("No roots test failed\n");
-	}
-//---------------------------------------------------//
-
-//----------------a = 1, b = 0, c = 1----------------//
-
-	SE_Solver(1, 0, 1, &x1, &x2, &roots_amount);
-	if (roots_amount == 0)
-	{
-		printf("No roots test passed\n");
-	}
-	else
-	{
-		printf("No roots test failed\n");
-	}
-//---------------------------------------------------//
-
-//----------------a = 1, b = 2, c = 1----------------//
-
-	SE_Solver(1, 2, 1, &x1, &x2, &roots_amount);
-	if (roots_amount == 1 && x1 == -1)
-	{
-		printf("Test passed, correct answer\n");
-	}
-	else
-	{
-		printf("Test failed, incorrect answer\n");
-	}
-//----------------a = 4, b = 2, c = 1----------------//
-
-	SE_Solver(4, 2, 1, &x1, &x2, &roots_amount);
-	if (roots_amount == 0)
-	{
-		printf("Negative discriminant test passed\n");
-	}
-	else
-	{
-		printf("Negative discriminant test failed\n");
-	}
-//---------------------------------------------------//
-
-	return 0;
+		printf("Test number %d failed\n", number);
+	printf("x1 = %lg, x2 = %lg\n", *x1, *x2);
 }
