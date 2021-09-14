@@ -3,6 +3,27 @@
 
 #include "solver.h"
 
+//----------------------------------------------------
+//!
+//! Sctructure for testing solver, contains given data
+//! and expected answers for comparison
+//!
+//----------------------------------------------------
+
+struct Data
+{
+	double a; 							//< first coefficient
+	double b; 							//< second coefficient
+	double c; 							//< third coefficient
+	double* x1; 						//< pointer to the first root
+	double* x2; 						//< pointer to the second root
+	enum Amount_of_roots* roots_amount; //< pointer to the amount of roots
+	double answ1; 						//< expected first root
+	double answ2; 						//< expected second root
+	enum Amount_of_roots outcome; 		//< expected amount of roots
+	int number; 						//< number of test
+};
+
 //------------------------------------------------------
 //! Tester for Square Equation Solver
 //!
@@ -13,6 +34,6 @@
 //!
 //------------------------------------------------------
 
-void Unit_Test(double a, double b, double c, double* x1, double* x2, enum Amount_of_roots* roots_amount, double answ1, double answ2, enum Amount_of_roots outcome, int number);
+void Unit_Test(struct Data test_data);
 
 #endif // UNIT_TEST_H
