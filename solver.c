@@ -5,6 +5,23 @@
 #include "solver.h"
 #include "input.h"
 
+
+//----------------------------------------------
+//!
+//! Solves linear equation and returns one root
+//!
+//! @param[in]  <b> second coefficient
+//! @param[in]  <c> third coefficient
+//! @param[out] <x1> pointer to the first root
+//!
+//----------------------------------------------
+
+static enum Amount_of_roots linear_equation(double b, double c, double* x1)
+{
+	*x1 = -c/b;
+	return ONE;
+}
+
 enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double* x2)
 {	
 	assert(x1 != x2);
@@ -35,8 +52,7 @@ enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double*
 	}
 	else if (Cmp(a, 0)==0)
 	{
-		*x1 = -c/b;
-		return ONE;
+		return linear_equation(b, c, x1);
 	}
 	else if (Cmp(b, 0)==0)
 	{
@@ -70,7 +86,6 @@ enum Amount_of_roots SE_Solver(double a, double b, double c, double* x1, double*
 				return TWO;
 			}
 		}
-
 		else
 		{
 			return ZERO;

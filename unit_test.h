@@ -12,16 +12,16 @@
 
 struct Data
 {
-	double a; 							//< first coefficient
-	double b; 							//< second coefficient
-	double c; 							//< third coefficient
-	double* x1; 						//< pointer to the first root
-	double* x2; 						//< pointer to the second root
+	double a;                           //< first coefficient
+	double b;                           //< second coefficient
+	double c;                           //< third coefficient
+	double* x1;                         //< pointer to the first root
+	double* x2;                         //< pointer to the second root
 	enum Amount_of_roots* roots_amount; //< pointer to the amount of roots
-	double answ1; 						//< expected first root
-	double answ2; 						//< expected second root
-	enum Amount_of_roots outcome; 		//< expected amount of roots
-	int number; 						//< number of test
+	double answ1;                       //< expected first root
+	double answ2;                       //< expected second root
+	enum Amount_of_roots outcome;       //< expected amount of roots
+	int number;                         //< number of test
 };
 
 //------------------------------------------------------
